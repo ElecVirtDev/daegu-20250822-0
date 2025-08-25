@@ -24,14 +24,20 @@ document.getElementById("sumbitBtn").addEventListener("click", async () => {
 
   if (userName.length == 0) {
     showToast("이름을 입력하세요.", "warning");
+    document.getElementById("userName").focus();
+    return;
   }
 
   if (userBirth.length != 10) {
     showToast("생년월일을 입력하세요.", "warning");
+    document.getElementById("userBirth").focus();
+    return;
   }
 
   if (userTel.length != 11 || !checkNum.test(userTel)) {
     showToast("올바른 전화번호 11자를 입력하세요.", "warning");
+    document.getElementById("userTel").focus();
+    return;
   }
 
   if (
@@ -40,39 +46,59 @@ document.getElementById("sumbitBtn").addEventListener("click", async () => {
     !userEmail.includes(".")
   ) {
     showToast("올바른 이메일 주소를 입력하세요. (예: abc@xyz.com)", "warning");
+    document.getElementById("userEmail").focus();
+    return;
   }
 
   if (userSchool.length == 0) {
     showToast("학교명을 입력하세요.", "warning");
+    document.getElementById("userSchool").focus();
+    return;
   }
 
   if (userMajor.length == 0) {
     showToast("전공을 입력하세요.", "warning");
+    document.getElementById("userMajor").focus();
+    return;
   }
 
   if (userGradu.length != 4 || !checkNum.test(userGradu)) {
     showToast("졸업년도를 입력하세요. (예: 2025)", "warning");
+    document.getElementById("userGradu").focus();
+    return;
   }
 
   if (userCompany.length == 0) {
     showToast("회사명을 입력하세요.", "warning");
+    document.getElementById("userCompany").focus();
+    return;
   }
 
   if (userDuty.length == 0) {
     showToast("직무를 입력하세요.", "warning");
+    document.getElementById("userDuty").focus();
+    return;
   }
 
   if (userDutyDate.length < 4 || !checkDate.test(userDutyDate)) {
     showToast("올바른 근무 기간을 입력하세요.", "warning");
+    document.getElementById("userDutyDate").focus();
+    return;
   }
 
   if (userTechStack.length == 0) {
     showToast("기술 스택을 입력하세요.", "warning");
+    document.getElementById("userTechStack").focus();
+    return;
   }
 
   if (userIntro.length < 50) {
     showToast("자기 소개를 입력하세요. (최소 50자)", "warning");
+    document.getElementById("userIntro").focus();
+    return;
   }
+
+  showToast("이력서에 별 이상 없습니다!!", "success");
 
   //console.log("userId -- " + userId.length);
 
