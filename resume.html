@@ -84,54 +84,86 @@
       <!-- 학력 -->
       <section class="mb-8">
         <h2 class="text-xl font-semibold mb-4">학력</h2>
-        <div class="space-y-4">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <input
-              id="userSchool"
-              type="text"
-              class="border rounded-lg p-2 focus:ring focus:ring-blue-300"
-              placeholder="학교명"
-            />
-            <input
-              id="userMajor"
-              type="text"
-              class="border rounded-lg p-2 focus:ring focus:ring-blue-300"
-              placeholder="전공"
-            />
-            <input
-              id="userGradu"
-              type="text"
-              class="border rounded-lg p-2 focus:ring focus:ring-blue-300"
-              placeholder="졸업년도"
-            />
+        <div id="userSchoolSections">
+          <div id="userSchoolSection" class="space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-1">
+              <input
+                id="userSchool"
+                type="text"
+                class="border rounded-lg p-2 focus:ring focus:ring-blue-300"
+                placeholder="학교명"
+              />
+              <input
+                id="userMajor"
+                type="text"
+                class="border rounded-lg p-2 focus:ring focus:ring-blue-300"
+                placeholder="전공"
+              />
+              <input
+                id="userGradu"
+                type="text"
+                class="border rounded-lg p-2 focus:ring focus:ring-blue-300"
+                placeholder="졸업년도"
+              />
+            </div>
           </div>
+        </div>
+        <div class="flex justify-end gap-4 py-3">
+          <button
+            id="schoolAddBtn"
+            class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+          >
+            추가
+          </button>
+          <button
+            id="schoolDelBtn"
+            class="px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-blue-700"
+          >
+            제거
+          </button>
         </div>
       </section>
 
       <!-- 경력 -->
       <section class="mb-8">
         <h2 class="text-xl font-semibold mb-4">경력</h2>
-        <div class="space-y-4">
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <input
-              id="userCompany"
-              type="text"
-              class="border rounded-lg p-2 focus:ring focus:ring-blue-300"
-              placeholder="회사명"
-            />
-            <input
-              id="userDuty"
-              type="text"
-              class="border rounded-lg p-2 focus:ring focus:ring-blue-300"
-              placeholder="직무"
-            />
-            <input
-              id="userDutyDate"
-              type="text"
-              class="border rounded-lg p-2 focus:ring focus:ring-blue-300"
-              placeholder="근무기간 (예: 2019-2023)"
-            />
+        <div id="userCompanySections">
+          <div id="userCompanySection" class="space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 py-1">
+              <input
+                id="userCompany"
+                type="text"
+                class="border rounded-lg p-2 focus:ring focus:ring-blue-300"
+                placeholder="회사명"
+              />
+              <input
+                id="userDuty"
+                type="text"
+                class="border rounded-lg p-2 focus:ring focus:ring-blue-300"
+                placeholder="직무"
+              />
+              <input
+                id="userDutyDate"
+                type="text"
+                class="border rounded-lg p-2 focus:ring focus:ring-blue-300"
+                placeholder="근무기간 (예: 2019-2023)"
+              />
+            </div>
           </div>
+        </div>
+        <div class="flex justify-end gap-4 py-3">
+          <button
+            id="companyAddBtn"
+            class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+          >
+            추가
+          </button>
+          <button
+            id="companyDelBtn"
+            class="px-6 py-2 bg-red-600 text-white rounded-lg hover:bg-blue-700"
+          >
+            제거
+          </button>
         </div>
       </section>
 

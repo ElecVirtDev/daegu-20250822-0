@@ -1,0 +1,14 @@
+{
+  "name": "npm-test",
+  "description": "연습",
+  "authors": "author",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: 없어\" && exit 1"
+  },
+  "keywords": [],
+  "author": "KDY",
+  "license": "MIT"
+}

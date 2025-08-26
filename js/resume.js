@@ -1,8 +1,55 @@
 // API 서버 주소 (환경에 맞게 수정)
 const API_BASE_URL = "https://your-api-server.com";
 
+var schoolNum = 1;
+let schoolSections = [];
+let userSchoolSection = document.getElementById("userSchoolSection");
+
+var companyNum = 1;
+let companySections = [];
+let userCompanySection = document.getElementById("userCompanySection");
+
+document.getElementById("schoolAddBtn").addEventListener("click", async () => {
+  let userSchoolSectionDup = userSchoolSection.cloneNode(true);
+  userSchoolSectionDup.id = "userSchoolSection" + schoolNum;
+  document
+    .getElementById("userSchoolSections")
+    .appendChild(userSchoolSectionDup);
+  schoolNum++;
+  schoolSections.push(userSchoolSectionDup);
+});
+
+document.getElementById("schoolDelBtn").addEventListener("click", async () => {
+  if (schoolSections.length > 0) {
+    let lastSchoolSection = schoolSections.pop();
+    lastSchoolSection.remove();
+    companyNum--;
+  } else {
+    console.log("삭제할 학력이 없습니다.");
+  }
+});
+
+document.getElementById("companyAddBtn").addEventListener("click", async () => {
+  let userCompanySectionDup = userCompanySection.cloneNode(true);
+  userCompanySectionDup.id = "userCompanySection" + companyNum;
+  document
+    .getElementById("userCompanySections")
+    .appendChild(userCompanySectionDup);
+  companyNum++;
+  companySections.push(userCompanySectionDup);
+});
+
+document.getElementById("companyDelBtn").addEventListener("click", async () => {
+  if (companySections.length > 0) {
+    let lastCompanySection = companySections.pop();
+    lastCompanySection.remove();
+    companyNum--;
+  } else {
+    console.log("삭제할 경력이 없습니다.");
+  }
+});
+
 document.getElementById("sumbitBtn").addEventListener("click", async () => {
-  //const userId = document.getElementById("userId").value.trim();
   const userName = document.getElementById("userName").value.trim();
   const userBirth = document.getElementById("userBirth").value.trim();
   const userTel = document.getElementById("userTel").value.trim();
